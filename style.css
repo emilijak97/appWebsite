@@ -114,6 +114,10 @@ p {
 .btn:focus {
     outline: none;
 }
+.form {
+    width: 90%;
+    margin: auto;
+}
 /* mobile styles -------------------------------------------------------------------- */
 .grid {
     display: grid;
@@ -287,8 +291,6 @@ footer {
     }
 }
 
-
-
 /* small tablets styles -----------------------------------------------------------------*/
 @media screen and (min-width: 720px) {
     .beyond-main-text {
@@ -317,6 +319,10 @@ footer {
     }
     .beyond-main-img img, .beyond-recipe-img img, .beyond-journal-img img {
         width: 90%;
+    }
+    .form {
+        width: 70%;
+        margin: auto;
     }
 }
 
@@ -347,6 +353,10 @@ footer {
     }
     .beyond-main-text, .beyond-recipe-text, .beyond-journal-text {
        align-self: center;
+    }
+    .form {
+        width: 60%;
+        margin: auto;
     }
 }
 /*mobile burger -------------------------------------------------------------------------*/
@@ -393,6 +403,7 @@ footer {
     .toggle .line-3 {
         transform: rotate(45deg) translate(-5px, -10px);
     }
+
     @keyframes navLinkFade {
         from {
             opacity: 0;
@@ -406,10 +417,7 @@ footer {
 }
 
 /* sign up page -------------------------------------------- */
-.form {
-    width: 100%;
-    margin: auto;
-}
+
 .sign-up-form {
     display: flex;
     flex-direction: column;
@@ -421,15 +429,39 @@ footer {
 .sign-up-form input {
     padding: 10px;
     margin: 10px 0;
-    border-color: rgb(228, 228, 228);
+    border: solid rgb(228, 225, 225);
     transition: all 0.5s ease;
+    border-radius: 10px;
 }
 .sign-up-form input:focus {
-    outline-width: 3px;
-    outline-style: solid;
-    outline-color: #AB7AF4;
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #AB7AF4;
 }
 .sign-up-form button {
     padding: 10px;
     margin: 10px 0;
+}
+
+.reg {
+    border: none;
+    font-size: 18px;
+    background: #AB7AF4;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-family: 'Poppins Regular';
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.reg:hover {
+    transform: translate(0, -5px);
+    box-shadow: 5px 5px 15px rgb(167, 157, 157);
+    background: #b788ff;
+}
+.reg:focus {
+    outline: none;
+}
+.reg a {
+    color: white;
+    text-decoration: none;
 }
