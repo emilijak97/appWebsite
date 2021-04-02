@@ -1,3 +1,22 @@
+// burger animation
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLink = document.querySelectorAll('.nav-links li')
+
+burger.addEventListener('click', function() {
+    nav.classList.toggle('nav-links-active');
+
+    navLink.forEach((link, index) => {
+        if(link.style.animation) {
+            link.style.animation = '';
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        }
+    });
+
+    burger.classList.toggle('toggle');
+});
+
 let slidePosition = 0;
 const slides = document.getElementsByClassName('beyond-sub');
 const totalSlides = slides.length;
@@ -37,26 +56,6 @@ function moveToPrevSlide() {
     }
     updateSlidePosition();
 }
-
-// burger animation
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-const navLink = document.querySelectorAll('.nav-links li')
-
-burger.addEventListener('click', function() {
-    nav.classList.toggle('nav-links-active');
-
-    navLink.forEach((link, index) => {
-        if(link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-        }
-    });
-
-    burger.classList.toggle('toggle');
-});
-
 
 // animate on scroll
 var element = document.querySelector(".beyond-recipe-img");
