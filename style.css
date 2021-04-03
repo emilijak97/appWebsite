@@ -463,6 +463,16 @@ footer {
     outline: none;
 }
 
+.error {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #9f9da3;
+    color: white;
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* about and contact page ---------------------------------------------- */
 .about, .contact {
     padding: 40px;

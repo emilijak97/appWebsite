@@ -28,6 +28,6 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
         //kada kliknemo submit dugme dobicemo poruku za svaku gresku
         errorElement.innerText = messages.join(', ');
+        errorElement.classList.add('error');
     }
-    
 });
