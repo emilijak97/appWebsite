@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     
     <title>Sign-up</title>
 </head>
 <body>
@@ -23,16 +24,16 @@
         </div>
     </nav>
     
-    <section id="sign-up-form">
-        <form id="form">
+    <section class="form">
+        <div id="error"></div>
+        <form id="formVal" class="sign-up-form" method="POST">
             <h3>Create an account</h3>
-            <input id="firstName" type="text" value="First Name">
-            <input id="lastName" type="text" value="Last Name">
-            <input id="email" type="email" value="Email">
-            <input id="confEmail" type="email" value="Confirm Email">
-            <input id="password" type="password" value="Password">
-            <input id="confPassword" type="password" value="Confirm Password">
-            <button class="reg" type="submit"><a href="#">Register</a></button>
+            <input id="firstName" type="text" placeholder="First Name" required>
+            <input id="lastName" type="text" placeholder="Last Name" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <input id="password" type="password" placeholder="Password" required>
+            <button class="reg" type="submit">Register</button>
+            <button class="reg" type="reset">Reset</button>
         </form>
     </section>
 
@@ -61,6 +62,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js"></script> 
+    <script src="sign-up.js"></script>
 </body>
 </html>

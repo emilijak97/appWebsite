@@ -89,9 +89,4 @@ function animate() {
     }
 }
 
-// form 
-const input = document.querySelector('.input-1');
 
-input.addEventListener('click', function() {
-    value = "";
-});
