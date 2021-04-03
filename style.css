@@ -465,3 +465,15 @@ footer {
     color: white;
     text-decoration: none;
 }
+
+/* about and contact page ---------------------------------------------- */
+.about, .contact {
+    padding: 40px;
+}
+.about p, .about h4 {
+    padding: 20px 0;
+}
+.contact h4 {
+    text-align: center;
+}
+/* contact page -------------------------------------------- */
