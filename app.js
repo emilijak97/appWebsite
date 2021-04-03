@@ -88,3 +88,10 @@ function animate() {
         element.classList.add('animate-scroll');
     }
 }
+
+// form 
+const input = document.querySelector('.input-1');
+
+input.addEventListener('click', function() {
+    value = "";
+});

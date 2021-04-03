@@ -114,7 +114,7 @@ p {
 .btn:focus {
     outline: none;
 }
-.form {
+#sign-up-form {
     width: 90%;
     margin: auto;
 }
@@ -418,26 +418,26 @@ footer {
 
 /* sign up page -------------------------------------------- */
 
-.sign-up-form {
+#form {
     display: flex;
     flex-direction: column;
     padding: 30px;
 }
-.sign-up-form h3 {
+#form h3 {
     text-align: center;
 }
-.sign-up-form input {
+#form input {
     padding: 10px;
     margin: 10px 0;
     border: solid rgb(228, 225, 225);
     transition: all 0.5s ease;
     border-radius: 10px;
 }
-.sign-up-form input:focus {
+#form input:focus {
     outline: none;
     box-shadow: 0 0 3pt 2pt #AB7AF4;
 }
-.sign-up-form button {
+#form button {
     padding: 10px;
     margin: 10px 0;
 }
@@ -472,8 +472,12 @@ footer {
 }
 .about p, .about h4 {
     padding: 20px 0;
-}
-.contact h4 {
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
-/* contact page -------------------------------------------- */
+.contact {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
