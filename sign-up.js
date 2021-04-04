@@ -9,6 +9,8 @@ const errorElement = document.getElementById('error');
 
 //prevent form from submiting if we have errors
 form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     let messages = [];
 
     if (password.value.length <= 6) {
@@ -23,11 +25,15 @@ form.addEventListener('submit', (e) => {
         messages.push('Password cannot be password');
     } 
 
-    // ako je niz messages veci od nule znaci da imamo greske i ne zelimo da se forma prihvati
     if (messages.length > 0) {
-        e.preventDefault();
-        //kada kliknemo submit dugme dobicemo poruku za svaku gresku
         errorElement.innerText = messages.join(', ');
         errorElement.classList.add('error');
+    } else {
+        console.log("Form has been submitted");
+        console.log(firstName.value);
+        errorElement.innerText = "";
+        errorElement.classList.remove('error');
+        form.reset();
+        alert("Your account is created!")
     }
 });
