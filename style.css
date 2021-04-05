@@ -426,14 +426,15 @@ footer {
 .sign-up-form h3 {
     text-align: center;
 }
-.sign-up-form input {
+.sign-up-form input, select {
     padding: 10px;
     margin: 10px 0;
     border: solid rgb(228, 225, 225);
     transition: all 0.5s ease;
     border-radius: 10px;
+    color: #868686;
 }
-.sign-up-form input:focus {
+.sign-up-form input:focus, select:focus {
     outline: none;
     box-shadow: 0 0 3pt 2pt #AB7AF4;
 }
@@ -441,7 +442,9 @@ footer {
     padding: 10px;
     margin: 10px 0;
 }
-
+label {
+    color: #452F37;
+}
 .reg {
     border: none;
     font-size: 18px;

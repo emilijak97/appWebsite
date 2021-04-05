@@ -1,7 +1,4 @@
 // form 
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
 const password = document.getElementById('password');
 const form = document.getElementById('formVal');
 const errorElement = document.getElementById('error');
@@ -29,8 +26,6 @@ form.addEventListener('submit', (e) => {
         errorElement.innerText = messages.join(', ');
         errorElement.classList.add('error');
     } else {
-        console.log("Form has been submitted");
-        console.log(firstName.value);
         errorElement.innerText = "";
         errorElement.classList.remove('error');
         form.reset();
