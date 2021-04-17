@@ -1,10 +1,10 @@
 // burger animation
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
+const burger = $('.burger');
+const nav = $('.nav-links');
 const navLink = document.querySelectorAll('.nav-links li')
 
-burger.addEventListener('click', function() {
-    nav.classList.toggle('nav-links-active');
+burger.on('click', () => {
+    nav.toggleClass('nav-links-active');
 
     navLink.forEach((link, index) => {
         if(link.style.animation) {
@@ -14,27 +14,27 @@ burger.addEventListener('click', function() {
         }
     });
 
-    burger.classList.toggle('toggle');
+    burger.toggleClass('toggle');
 });
 
+
 let slidePosition = 0;
-const slides = document.getElementsByClassName('beyond-sub');
+const slides = $('.beyond-sub');
 const totalSlides = slides.length;
 
-document.getElementById('next-btn').addEventListener('click', function() {
+$('#next-btn').on('click', () => {
     moveToNextSlide();
 });
 
-document.getElementById('prev-btn').addEventListener('click', function() {
+$('#prev-btn').on('click', () => {
     moveToPrevSlide();
 });
 
 function updateSlidePosition() {
-    for (let i = 0; i < totalSlides; i++) {
-        console.log(slides[i]);
-        slides[i].classList.remove('visible');
-        //slides[i].classList.add('hidden');
-    }
+    //for (let i = 0; i < totalSlides; i++) {
+        slides.removeClass('visible');
+        //slides[i].classList.remove('visible');
+    //}
 
     slides[slidePosition].classList.add('visible');
 }
@@ -57,6 +57,8 @@ function moveToPrevSlide() {
     updateSlidePosition();
 }
 
+
+/*
 // animate on scroll
 var element = document.querySelector(".beyond-recipe-img");
 var elementHeight = element.clientHeight;
@@ -87,4 +89,4 @@ function animate() {
     if(inView()) {
         element.classList.add('animate-scroll');
     }
-}
+}*/
