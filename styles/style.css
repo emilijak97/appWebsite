@@ -46,6 +46,8 @@ nav {
 nav img {
   width: 75px;
   height: 45px;
+  -webkit-animation: drop 1.5s ease;
+          animation: drop 1.5s ease;
 }
 
 nav ul {
@@ -60,6 +62,8 @@ nav ul {
           justify-content: space-between;
   list-style: none;
   font-family: 'Poppins Medium';
+  opacity: 0;
+  z-index: 1;
 }
 
 nav ul li a {
@@ -74,17 +78,36 @@ nav ul li a:hover {
 
 .beyond-main-img, .beyond-recipe-img, .beyond-journal-img {
   width: 100%;
+  opacity: 0;
 }
 
 .beyond-main-img img, .beyond-recipe-img img, .beyond-journal-img img {
   width: 60%;
-  -webkit-animation: drop 1.5s ease;
-          animation: drop 1.5s ease;
 }
 
-.animate-scroll {
+.animate {
   -webkit-animation: drop 1.5s ease;
           animation: drop 1.5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.reveal {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.home-h1-load, .home-p-load, .sub-links, .sign-up-btn-load {
+  opacity: 0;
 }
 
 h1 {
@@ -161,11 +184,37 @@ p {
   margin: auto;
 }
 
+@-webkit-keyframes drop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 /* mobile styles -------------------------------------------------------------------- */
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
+  -ms-grid-columns: (1fr)12;
       grid-template-columns: repeat(12, 1fr);
 }
 
@@ -423,32 +472,6 @@ footer .account a:hover {
   }
 }
 
-@-webkit-keyframes drop {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes drop {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
 /* small tablets styles -----------------------------------------------------------------*/
 @media screen and (min-width: 720px) {
   .beyond-main-text {
@@ -507,7 +530,7 @@ footer .account a:hover {
   .grid-f {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: (1fr)2;
         grid-template-columns: repeat(2, 1fr);
   }
   .grid-f .footer-logo {
@@ -649,6 +672,10 @@ footer .account a:hover {
   padding: 30px;
 }
 
+.sign-up-form .h3-load, .sign-up-form .input1-load, .sign-up-form .input2-load, .sign-up-form .input3-load, .sign-up-form .input4-load, .sign-up-form .label-load, .sign-up-form .select-load, .sign-up-form .btn-reg-load, .sign-up-form .btn-reset-load {
+  opacity: 0;
+}
+
 .sign-up-form h3 {
   text-align: center;
 }
@@ -719,6 +746,7 @@ footer .account a:hover {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  opacity: 0;
 }
 
 .contact {
@@ -729,5 +757,10 @@ footer .account a:hover {
 
 .contact p {
   padding: 40px;
+  opacity: 0;
+}
+
+.contact h4 {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

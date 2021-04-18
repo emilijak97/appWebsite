@@ -19,6 +19,7 @@ nav {
     img {
         width: 75px;
         height: 45px;
+        animation: drop 1.5s ease;
     }
     ul {
         display: flex;
@@ -28,6 +29,8 @@ nav {
         justify-content: space-between;
         list-style: none;
         font-family: 'Poppins Medium';
+        opacity: 0;
+        z-index: 1;
         li {
             a {
                 text-decoration: none;
@@ -42,13 +45,26 @@ nav {
 }
 .beyond-main-img, .beyond-recipe-img, .beyond-journal-img {
     width: 100%;
+    opacity: 0;
     img {
         width: 60%;
-        animation: drop 1.5s ease;
     }
 }
-.animate-scroll {
+.animate {
     animation: drop 1.5s ease;
+    animation-fill-mode: forwards;
+}
+.reveal {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.home-h1-load, .home-p-load, .sub-links, .sign-up-btn-load {
+    opacity: 0;
 }
 h1 {
     color: $color3;
@@ -108,6 +124,17 @@ p {
 .form {
     width: 90%;
     margin: auto;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 /* mobile styles -------------------------------------------------------------------- */
 .grid {
@@ -284,16 +311,6 @@ footer {
         opacity: 1;
     }
 }
-@keyframes drop {
-    from {
-        opacity: 0;
-        transform: translateX(300px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 
 /* small tablets styles -----------------------------------------------------------------*/
 @media screen and (min-width: 720px) {
@@ -431,6 +448,9 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    .h3-load, .input1-load, .input2-load, .input3-load, .input4-load, .label-load, .select-load, .btn-reg-load, .btn-reset-load {
+        opacity: 0;
+    }
     h3 {
         text-align: center;
     }
@@ -487,6 +507,7 @@ footer {
         width: 80%;
         margin: 0 auto;
         text-align: center;
+        opacity: 0;
     }
 }
 .contact {
@@ -495,5 +516,9 @@ footer {
     text-align: center;
     p {
         padding: 40px;
-    }   
+        opacity: 0;
+    }  
+    h4 {
+        opacity: 0;
+    } 
 }

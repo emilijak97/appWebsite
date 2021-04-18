@@ -25,20 +25,20 @@
     
     <section class="form">
         <form id="formVal" class="sign-up-form" method="GET">
-            <h3>Create an account</h3>
-            <input id="firstName" type="text" placeholder="First Name" required>
-            <input id="lastName" type="text" placeholder="Last Name" required>
-            <input id="email" type="email" placeholder="Email" required>
-            <label for="plan">Subscription Plan:</label>
-            <select name="plan" id="plan">
+            <h3 class="form-h3-load">Create an account</h3>
+            <input id="firstName" class="input1-load" type="text" placeholder="First Name" required>
+            <input id="lastName" class="input2-load" type="text" placeholder="Last Name" required>
+            <input id="email" class="input3-load" type="email" placeholder="Email" required>
+            <label class="label-load" for="plan">Subscription Plan:</label>
+            <select name="plan" id="plan" class="select-load">
                 <option value="montly">Montly</option>
                 <option value="quarterly">Quarterly</option>
                 <option value="annually">Annually</option>
             </select>
-            <input id="password" type="password" placeholder="Password" required>
+            <input id="password" class="input4-load" type="password" placeholder="Password" required>
             <div id="error"></div>
-            <button class="reg" type="submit">Register</button>
-            <button class="reg" type="reset">Reset</button>
+            <button class="reg btn-reg-load" type="submit">Register</button>
+            <button class="reg btn-reset-load" type="reset">Reset</button>
         </form>
     </section>
 

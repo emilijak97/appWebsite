@@ -57,36 +57,106 @@ function moveToPrevSlide() {
     updateSlidePosition();
 }
 
-
-/*
-// animate on scroll
-var element = document.querySelector(".beyond-recipe-img");
-var elementHeight = element.clientHeight;
-
-document.addEventListener('scroll', animate);
-
-// check if element is in view, returns true or false
-function inView() {
-    // get window height
-    const windowHeight = window.innerHeight;
-    // get number of px that the document is scrolled
-    const scrollY = window.scrollY || window.scrollYOffset;
-
-    //get current scroll position
-    var scrollPosition = windowHeight + scrollY;
-    // get element position
-    var elementPosition = element.getBoundingClientRect().top + elementHeight + scrollY;
-
-    // is element in view
-    if (scrollPosition > elementPosition) {
-        return true;
-    } else {
-        return false;
-    }
-}
+//reveal elements on scroll
+window.addEventListener('load', animate);
+window.addEventListener('scroll', revealOnScroll);
 
 function animate() {
-    if(inView()) {
-        element.classList.add('animate-scroll');
+
+    /*var width = $(window).width();
+    $(window).resize(() => {
+        if (width <= 720) {
+            $('.nav-links').removeClass('animate');
+        }
+    });*/
+
+    $('.nav-links').delay(300).queue(() => {
+        $('.nav-links').addClass('animate'); 
+        if ($(window).width() < 720) {
+            $('.nav-links').removeClass('animate');
+            $('.nav-links').css('opacity', '1');
+        }
+    });
+    $('.beyond-main-img').delay(600).queue(() => {
+        $('.beyond-main-img').addClass('animate');
+    });
+    $('.home-h1-load').delay(1000).queue(() => {
+        $('.home-h1-load').addClass('animate');
+    });
+    $('.home-p-load').delay(1300).queue(() => {
+        $('.home-p-load').addClass('animate');
+    });
+    $('.sub-links').delay(1600).queue(() => {
+        $('.sub-links').addClass('animate');
+    });
+    $('.sign-up-btn-load').delay(1900).queue(() => {
+        $('.sign-up-btn-load').addClass('animate');
+    });
+    //sign-up page
+    $('.form-h3-load').delay(600).queue(() => {
+        $('.h3-load').addClass('animate');
+    });
+    $('.input1-load').delay(800).queue(() => {
+        $('.input1-load').addClass('animate');
+    });
+    $('.input2-load').delay(1000).queue(() => {
+        $('.input2-load').addClass('animate');
+    });
+    $('.input3-load').delay(1200).queue(() => {
+        $('.input3-load').addClass('animate');
+    });
+    $('.label-load').delay(1400).queue(() => {
+        $('.label-load').addClass('animate');
+    });
+    $('.select-load').delay(1600).queue(() => {
+        $('.select-load').addClass('animate');
+    });
+    $('.input4-load').delay(1800).queue(() => {
+        $('.input4-load').addClass('animate');
+    });
+    $('.btn-reg-load').delay(1800).queue(() => {
+        $('.btn-reg-load').addClass('animate');
+    });
+    $('.btn-reset-load').delay(2000).queue(() => {
+        $('.btn-reset-load').addClass('animate');
+    });
+    //about, contact page
+    $('.about-contact-p1-load').delay(600).queue(() => {
+        $('.about-contact-p1-load').addClass('animate');
+    });
+    $('.about-contact-h4-load').delay(800).queue(() => {
+        $('.about-contact-h4-load').addClass('animate');
+    });
+    $('.about-p2-load').delay(1000).queue(() => {
+        $('.about-p2-load').addClass('animate');
+    });
+    $('.about-p3-load').delay(1200).queue(() => {
+        $('.about-p3-load').addClass('animate');
+    });
+    $('.contact-h4-load').delay(1200).queue(() => {
+        $('.contact-h4-load').addClass('animate');
+    });
+}
+
+/*$(document).ready(() => {
+    $('.beyond-main-img').hide().delay(1000).fadeIn(2000);
+});*/
+
+function revealOnScroll() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        //const scrollY = window.scrollY || window.scrollYOffset;
+        //var scrollPosition = windowHeight + scrollY;
+        var elementPosition = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 100;
+
+        //-revealPoint odlaze dodelu klase active za 150px 
+        if (windowHeight - revealPoint > elementPosition) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
     }
-}*/
+}
