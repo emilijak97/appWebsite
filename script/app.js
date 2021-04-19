@@ -63,77 +63,74 @@ window.addEventListener('scroll', revealOnScroll);
 
 function animate() {
 
-    /*var width = $(window).width();
-    $(window).resize(() => {
-        if (width <= 720) {
-            $('.nav-links').removeClass('animate');
-        }
-    });*/
-
-    $('.nav-links').delay(300).queue(() => {
+    //kada se prebaci na mobilnu verziju ostane otvorena pozadina menija, kada se refresuje stranica onda radi
+    /*$('.nav-links').delay(300).queue(() => {
         $('.nav-links').addClass('animate'); 
         if ($(window).width() < 720) {
             $('.nav-links').removeClass('animate');
             $('.nav-links').css('opacity', '1');
         }
-    });
-    $('.beyond-main-img').delay(600).queue(() => {
+    });*/
+    /*if ($(window).width() < 720) {
+        $('.nav-links').css("animation", "none");
+    }*/
+    $('.beyond-main-img').delay(300).queue(() => {
         $('.beyond-main-img').addClass('animate');
     });
-    $('.home-h1-load').delay(1000).queue(() => {
+    $('.home-h1-load').delay(600).queue(() => {
         $('.home-h1-load').addClass('animate');
     });
-    $('.home-p-load').delay(1300).queue(() => {
+    $('.home-p-load').delay(900).queue(() => {
         $('.home-p-load').addClass('animate');
     });
-    $('.sub-links').delay(1600).queue(() => {
+    $('.sub-links').delay(1200).queue(() => {
         $('.sub-links').addClass('animate');
     });
-    $('.sign-up-btn-load').delay(1900).queue(() => {
+    $('.sign-up-btn-load').delay(1500).queue(() => {
         $('.sign-up-btn-load').addClass('animate');
     });
     //sign-up page
-    $('.form-h3-load').delay(600).queue(() => {
-        $('.h3-load').addClass('animate');
+    $('.form-h3-load').delay(300).queue(() => {
+        $('.form-h3-load').addClass('animate');
     });
-    $('.input1-load').delay(800).queue(() => {
+    $('.input1-load').delay(500).queue(() => {
         $('.input1-load').addClass('animate');
     });
-    $('.input2-load').delay(1000).queue(() => {
+    $('.input2-load').delay(700).queue(() => {
         $('.input2-load').addClass('animate');
     });
-    $('.input3-load').delay(1200).queue(() => {
+    $('.input3-load').delay(900).queue(() => {
         $('.input3-load').addClass('animate');
     });
-    $('.label-load').delay(1400).queue(() => {
+    $('.label-load').delay(1100).queue(() => {
         $('.label-load').addClass('animate');
     });
-    $('.select-load').delay(1600).queue(() => {
+    $('.select-load').delay(1300).queue(() => {
         $('.select-load').addClass('animate');
     });
-    $('.input4-load').delay(1800).queue(() => {
+    $('.input4-load').delay(1500).queue(() => {
         $('.input4-load').addClass('animate');
     });
-    $('.btn-reg-load').delay(1800).queue(() => {
+    $('.btn-reg-load').delay(1700).queue(() => {
         $('.btn-reg-load').addClass('animate');
     });
-    $('.btn-reset-load').delay(2000).queue(() => {
+    $('.btn-reset-load').delay(1900).queue(() => {
         $('.btn-reset-load').addClass('animate');
     });
     //about, contact page
-    $('.about-contact-p1-load').delay(600).queue(() => {
+    $('.about-contact-p1-load').delay(300).queue(() => {
         $('.about-contact-p1-load').addClass('animate');
     });
-    $('.about-contact-h4-load').delay(800).queue(() => {
+    $('.about-contact-h4-load').delay(500).queue(() => {
         $('.about-contact-h4-load').addClass('animate');
     });
-    $('.about-p2-load').delay(1000).queue(() => {
+    $('.about-p2-load').delay(700).queue(() => {
         $('.about-p2-load').addClass('animate');
     });
-    $('.about-p3-load').delay(1200).queue(() => {
+    $('.about-p3-load').delay(900).queue(() => {
         $('.about-p3-load').addClass('animate');
     });
-    $('.contact-h4-load').delay(1200).queue(() => {
+    $('.contact-h4-load').delay(900).queue(() => {
         $('.contact-h4-load').addClass('animate');
     });
 }

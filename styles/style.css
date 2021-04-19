@@ -62,7 +62,8 @@ nav ul {
           justify-content: space-between;
   list-style: none;
   font-family: 'Poppins Medium';
-  opacity: 0;
+  -webkit-animation: drop 1.5s ease;
+          animation: drop 1.5s ease;
   z-index: 1;
 }
 
@@ -672,7 +673,7 @@ footer .account a:hover {
   padding: 30px;
 }
 
-.sign-up-form .h3-load, .sign-up-form .input1-load, .sign-up-form .input2-load, .sign-up-form .input3-load, .sign-up-form .input4-load, .sign-up-form .label-load, .sign-up-form .select-load, .sign-up-form .btn-reg-load, .sign-up-form .btn-reset-load {
+.sign-up-form .form-h3-load, .sign-up-form .input1-load, .sign-up-form .input2-load, .sign-up-form .input3-load, .sign-up-form .input4-load, .sign-up-form .label-load, .sign-up-form .select-load, .sign-up-form .btn-reg-load, .sign-up-form .btn-reset-load {
   opacity: 0;
 }
 

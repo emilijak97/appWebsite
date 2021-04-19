@@ -29,7 +29,7 @@ nav {
         justify-content: space-between;
         list-style: none;
         font-family: 'Poppins Medium';
-        opacity: 0;
+        animation: drop 1.5s ease;
         z-index: 1;
         li {
             a {
@@ -448,7 +448,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    .h3-load, .input1-load, .input2-load, .input3-load, .input4-load, .label-load, .select-load, .btn-reg-load, .btn-reset-load {
+    .form-h3-load, .input1-load, .input2-load, .input3-load, .input4-load, .label-load, .select-load, .btn-reg-load, .btn-reset-load {
         opacity: 0;
     }
     h3 {
